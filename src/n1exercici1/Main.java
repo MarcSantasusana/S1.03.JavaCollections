@@ -10,34 +10,31 @@ public class Main {
     {
         List<Month> monthList = new ArrayList<Month>();
 
-        Month january = new Month("January");
-        Month february = new Month("February");
-        Month march = new Month("March");
-        Month april = new Month("April");
-        Month may = new Month("May");
-        Month june = new Month("June");
-        Month july = new Month("July");
-        Month august = new Month("August");
-        Month september = new Month("September");
-        Month october = new Month("October");
-        Month november = new Month("November");
-        Month december = new Month("december");
 
-        monthList.add(january);
-        monthList.add(february);
-        monthList.add(march);
-        monthList.add(april);
-        monthList.add(may);
-        monthList.add(june);
-        monthList.add(july);
-        monthList.add(september);
-        monthList.add(october);
-        monthList.add(november);
-        monthList.add(december);
+        monthList.add(new Month("January"));
+        monthList.add(new Month("February"));
+        monthList.add(new Month("March"));
+        monthList.add(new Month("April"));
+        monthList.add(new Month("May"));
+        monthList.add(new Month("June"));
+        monthList.add(new Month("July"));
+        monthList.add(new Month("September"));
+        monthList.add(new Month("October"));
+        monthList.add(new Month("November"));
+        monthList.add(new Month("december"));
+
+        System.out.println("\nArrayList without august: \n");
+
+        for(Month m : monthList)
+        {
+            System.out.println(m.getName());
+        }
+
+        Month august = new Month("August");
 
         monthList.add(7, august);
 
-        System.out.println("\nArrayList: \n");
+        System.out.println("\nArrayList with every month: \n");
 
         for(Month m : monthList)
         {

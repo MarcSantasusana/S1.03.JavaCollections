@@ -1,12 +1,12 @@
 package n2exercici2;
 
 
-import java.util.HashSet;
 
-public class Restaurant
+
+public class Restaurant implements Comparable
 {
-    String name;
-    int rating;
+    private String name;
+   private int rating;
 
     public Restaurant(String name, int rating)
     {
@@ -22,29 +22,35 @@ public class Restaurant
         return name;
     }
 
-    public Restaurant isRepeated(HashSet<Restaurant> restaurantsList)
+
+    @Override
+    public boolean equals(Object obj)
     {
-        boolean found = false;
-        int i = 0;
-        Restaurant rest = this;
+        Restaurant restaurant = (Restaurant) obj;
 
-        Restaurant[] restaurantsArray  = restaurantsList.toArray(new Restaurant[restaurantsList.size()]);
+        return restaurant.getName().equals(this.name) && restaurant.getRating() == this.rating;
+    }
 
-        while(!found && i<restaurantsArray.length)
+    @Override
+    public int hashCode()
+    {
+        return rating + name.hashCode();
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+
+        Restaurant restaurant = (Restaurant)o;
+        int compareName = this.name.compareTo(restaurant.getName());
+
+        if(compareName == 0)
         {
-            if(restaurantsArray[i].getName().equals(this.name) && restaurantsArray[i].getRating() == this.rating)
-            {
-                found = true;
-                rest = restaurantsArray[i];
-
-            }
-            else {
-                i++;
-            }
-
+            return Integer.compare(restaurant.rating, this.rating);
         }
 
-        return rest;
-
+        else {
+            return compareName;
+        }
     }
 }

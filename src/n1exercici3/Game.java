@@ -9,11 +9,11 @@ import java.util.*;
 public class Game {
 
    private final int NQUESTIONS;
-    File inFile;
-    File outFile;
+    private File inFile;
+    private File outFile;
 
-    HashMap<String, String> questionsMap;
-    Player player;
+    private HashMap<String, String> questionsMap;
+   private  Player player;
 
    public Game(String inFilePath, String outFilePath)
    {
@@ -33,6 +33,8 @@ public class Game {
         String name = scanner.nextLine();
 
          player.setName(name);
+
+
     }
 
     public void startGame() throws IOException {
@@ -74,7 +76,10 @@ public class Game {
 
         System.out.println("You got " + player.getPoints() + " points");
 
+
+
         writeFile();
+
 
     }
 
@@ -106,6 +111,8 @@ public class Game {
            questionsMap.put(country, capital);
 
         }
+
+
 
 
     }

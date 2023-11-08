@@ -10,7 +10,7 @@ public class Main
         int option;
         boolean quit = false;
         List<Person> peopleList = new ArrayList<Person>();
-        String filePath = "C:/Users/Usuari/Desktop/llistaPersones.csv";
+        String filePath = "src/n3exercici1/llistaPersones.csv";
 
         readFile(peopleList, filePath);
 

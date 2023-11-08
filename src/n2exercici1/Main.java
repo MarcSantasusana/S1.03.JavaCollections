@@ -29,16 +29,16 @@ public class Main
 
         Restaurant rest10 = new Restaurant("McDonald's", 3);
 
-        restaurantsList.add(rest1.isRepeated(restaurantsList));
-        restaurantsList.add(rest2.isRepeated(restaurantsList));
-        restaurantsList.add(rest3.isRepeated(restaurantsList));
-        restaurantsList.add(rest4.isRepeated(restaurantsList));
-        restaurantsList.add(rest5.isRepeated(restaurantsList));
-        restaurantsList.add(rest6.isRepeated(restaurantsList));
-        restaurantsList.add(rest7.isRepeated(restaurantsList));
-        restaurantsList.add(rest8.isRepeated(restaurantsList));
-        restaurantsList.add(rest9.isRepeated(restaurantsList));
-        restaurantsList.add(rest10.isRepeated(restaurantsList));
+        restaurantsList.add(rest1);
+        restaurantsList.add(rest2);
+        restaurantsList.add(rest3);
+        restaurantsList.add(rest4);
+        restaurantsList.add(rest5);
+        restaurantsList.add(rest6);
+        restaurantsList.add(rest7);
+        restaurantsList.add(rest8);
+        restaurantsList.add(rest9);
+        restaurantsList.add(rest10);
 
         System.out.println("\nList of restaurants: \n");
 
